@@ -13,7 +13,7 @@ const DogapiList = props => {
       <h1>Welcome to the random Dog API!</h1>
       <button onClick={props.getData}> GET DOG </button>
         {props.isLoading ? (
-          <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
+          <Loader type="tailspin" color="#00BFFF" height="100" width="100" />
         ) : (
           ''
         )}
