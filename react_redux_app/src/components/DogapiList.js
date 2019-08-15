@@ -4,22 +4,20 @@ import Loader from 'react-loader-spinner';
 
 import { getData } from '../actions';
 
-//import Webcam from './Webcam';
+import Dogapi from './Dogapi';
 
 const DogapiList = props => {
     console.log('props from DogapiList', props)
   return (
     <>
       <h1>Welcome to the random Dog API!</h1>
-      {/* <button onClick={props.getData}>
-        {props.isLoading ? (
+      <button onClick={props.getData}> GET DOG </button>
+        {/* {{props.isLoading ? (
           <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
         ) : (
           'Get DOG API Data'
-        )}
-      </button>
-      {props.dogapi &&
-        props.dogapi.map(cam => <Dogapi key={cam.name} webcam={cam} />)} */}
+        )} */}
+      <Dogapi key={props.dogapi.message} getdog={props.dogapi.message} />
     </>
   );
 };
